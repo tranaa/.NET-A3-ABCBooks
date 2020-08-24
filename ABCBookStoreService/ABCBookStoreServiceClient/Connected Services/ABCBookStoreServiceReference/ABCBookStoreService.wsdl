@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ABCBookStoreService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://localhost:44397/ABCBookStoreService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://localhost:44397/ABCBookStoreService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost:44397/ABCBookStoreService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ABCBookStoreService" />
+      <xsd:import schemaLocation="https://localhost:44397/ABCBookStoreService.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IABCBookStoreInsertService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreInsertService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByDateService_RetrieveByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByDate" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByDateService_RetrieveByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByPriceService_RetrieveByPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByPrice" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByPriceService_RetrieveByPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByPublisherService_RetrieveByPublisher_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByPublisher" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByPublisherService_RetrieveByPublisher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByPublisherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByAuthorService_RetrieveByAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveByAuthorService_RetrieveByAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveByAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreDeleteService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreDeleteService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreUpdateService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreUpdateService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveAllService_RetrieveAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAll" />
+  </wsdl:message>
+  <wsdl:message name="IABCBookStoreRetrieveAllService_RetrieveAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IABCBookStoreInsertService">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreInsertService/Insert" message="tns:IABCBookStoreInsertService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreInsertService/InsertResponse" message="tns:IABCBookStoreInsertService_Insert_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreRetrieveByDateService">
+    <wsdl:operation name="RetrieveByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByDateService/RetrieveByDate" message="tns:IABCBookStoreRetrieveByDateService_RetrieveByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByDateService/RetrieveByDateResponse" message="tns:IABCBookStoreRetrieveByDateService_RetrieveByDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreRetrieveByPriceService">
+    <wsdl:operation name="RetrieveByPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByPriceService/RetrieveByPrice" message="tns:IABCBookStoreRetrieveByPriceService_RetrieveByPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByPriceService/RetrieveByPriceResponse" message="tns:IABCBookStoreRetrieveByPriceService_RetrieveByPrice_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreRetrieveByPublisherService">
+    <wsdl:operation name="RetrieveByPublisher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByPublisherService/RetrieveByPublisher" message="tns:IABCBookStoreRetrieveByPublisherService_RetrieveByPublisher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByPublisherService/RetrieveByPublisherResponse" message="tns:IABCBookStoreRetrieveByPublisherService_RetrieveByPublisher_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreRetrieveByAuthorService">
+    <wsdl:operation name="RetrieveByAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByAuthorService/RetrieveByAuthor" message="tns:IABCBookStoreRetrieveByAuthorService_RetrieveByAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveByAuthorService/RetrieveByAuthorResponse" message="tns:IABCBookStoreRetrieveByAuthorService_RetrieveByAuthor_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreDeleteService">
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreDeleteService/Delete" message="tns:IABCBookStoreDeleteService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreDeleteService/DeleteResponse" message="tns:IABCBookStoreDeleteService_Delete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreUpdateService">
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreUpdateService/Update" message="tns:IABCBookStoreUpdateService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreUpdateService/UpdateResponse" message="tns:IABCBookStoreUpdateService_Update_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IABCBookStoreRetrieveAllService">
+    <wsdl:operation name="RetrieveAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveAllService/RetrieveAll" message="tns:IABCBookStoreRetrieveAllService_RetrieveAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IABCBookStoreRetrieveAllService/RetrieveAllResponse" message="tns:IABCBookStoreRetrieveAllService_RetrieveAll_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreInsertService" type="tns:IABCBookStoreInsertService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreInsertService/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreRetrieveByDateService" type="tns:IABCBookStoreRetrieveByDateService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveByDate">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreRetrieveByDateService/RetrieveByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreRetrieveByPriceService" type="tns:IABCBookStoreRetrieveByPriceService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveByPrice">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreRetrieveByPriceService/RetrieveByPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreRetrieveByPublisherService" type="tns:IABCBookStoreRetrieveByPublisherService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveByPublisher">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreRetrieveByPublisherService/RetrieveByPublisher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreRetrieveByAuthorService" type="tns:IABCBookStoreRetrieveByAuthorService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveByAuthor">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreRetrieveByAuthorService/RetrieveByAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreDeleteService" type="tns:IABCBookStoreDeleteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreDeleteService/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreUpdateService" type="tns:IABCBookStoreUpdateService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreUpdateService/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCBookStoreRetrieveAllService" type="tns:IABCBookStoreRetrieveAllService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveAll">
+      <soap:operation soapAction="http://tempuri.org/IABCBookStoreRetrieveAllService/RetrieveAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ABCBookStoreService">
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreInsertService" binding="tns:BasicHttpBinding_IABCBookStoreInsertService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreRetrieveByDateService" binding="tns:BasicHttpBinding_IABCBookStoreRetrieveByDateService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreRetrieveByPriceService" binding="tns:BasicHttpBinding_IABCBookStoreRetrieveByPriceService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreRetrieveByPublisherService" binding="tns:BasicHttpBinding_IABCBookStoreRetrieveByPublisherService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreRetrieveByAuthorService" binding="tns:BasicHttpBinding_IABCBookStoreRetrieveByAuthorService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreDeleteService" binding="tns:BasicHttpBinding_IABCBookStoreDeleteService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreUpdateService" binding="tns:BasicHttpBinding_IABCBookStoreUpdateService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCBookStoreRetrieveAllService" binding="tns:BasicHttpBinding_IABCBookStoreRetrieveAllService">
+      <soap:address location="http://localhost:65139/ABCBookStoreService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

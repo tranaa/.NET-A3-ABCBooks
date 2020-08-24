@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCBookStoreService", "ABCBookStoreService\ABCBookStoreService.csproj", "{695A4F80-F314-4DB9-B10E-0121E9D2C8CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCBookStoreServiceClient", "ABCBookStoreServiceClient\ABCBookStoreServiceClient.csproj", "{C7C033B9-D3A0-4FF0-82F2-968BC6447DB7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{695A4F80-F314-4DB9-B10E-0121E9D2C8CF} = {695A4F80-F314-4DB9-B10E-0121E9D2C8CF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{695A4F80-F314-4DB9-B10E-0121E9D2C8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695A4F80-F314-4DB9-B10E-0121E9D2C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695A4F80-F314-4DB9-B10E-0121E9D2C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695A4F80-F314-4DB9-B10E-0121E9D2C8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C033B9-D3A0-4FF0-82F2-968BC6447DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C033B9-D3A0-4FF0-82F2-968BC6447DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C033B9-D3A0-4FF0-82F2-968BC6447DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C033B9-D3A0-4FF0-82F2-968BC6447DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9253D004-9389-4C33-8ECC-E1A81582E64E}
+	EndGlobalSection
+EndGlobal
